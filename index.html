@@ -12,18 +12,18 @@
 </head>
 <body>
   <!-- HEADER -->
-  <header class="header">
+  <header class="header" id="home">
     <div class="logo-container">
       <img class="logo" src="/icon.png" alt="Logo">
       <span class="logo-text">rodridev</span>
     </div>
     <nav class="navbar">
       <ul class="nav-links">
-        <li><a href="#">Home</a></li>
+        <li><a href="#home">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
+        <li><a href="#projects">Projects</a></li>
       </ul>
-      <button class="btn" onclick="window.open('mailto:rph26031994@gmail.com', '_blank')">Contact</button>
+      <button class="btn play-sound" onclick="window.open('mailto:rph26031994@gmail.com', '_blank')">Contact</button>
     </nav>
   </header>
   
@@ -33,8 +33,8 @@
     <div class="hero-content">
       <h1>Welcome to My Website</h1>
       <p>Explore the latest projects and learn more about our work and vision.</p>
-      <button class="btn" onclick="window.open('mailto:rph26031994@gmail.com', '_blank')">Contact</button>
-      <button class="btn" onclick="window.open('/files/MyCV.pdf', '_blank')">Resume</button>
+      <button class="btn play-sound" onclick="window.open('mailto:rph26031994@gmail.com', '_blank')">Contact</button>
+      <button class="btn play-sound" onclick="window.open('https://drive.google.com/file/d/1sZfI2-5mSsPMg1uXJKfBwH-gFda5mrMs/view?usp=sharing', '_blank')">Resume</button>
     </div>
   </section>
 
@@ -56,26 +56,89 @@
   
 
   <!-- PROJECTS SECTION -->
-  <section class="projects">
+  <section class="projects" id="projects">
     <h2>Projects</h2>
     <div class="project-cards">
       <div class="project-card">
-        <img src="/images/projects/bookstore.avif" alt="Project 1">
+        <img src="/images/projects/bookstore.avif" alt="Litstring" class="project-image">
         <h3>Litstring</h3>
-        <p>Bookstore for Ecomerce Project</p>
+        <p>Bookstore for an eCommerce project.</p>
+        <div class="technologies">
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-js"></i>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/rodridev-01/Bookstore-Ecomerce" target="_blank">
+            <i class="fab fa-github"></i> Source
+          </a>
+          <a href="https://litstring.netlify.app" target="_blank">
+            <i class="fas fa-external-link-alt"></i>Demo
+          </a>
+        </div>
       </div>
       <div class="project-card">
-        <img src="/images/projects/crunchy.avif" alt="Project 2">
+        <img src="/images/projects/crunchy.avif" alt="Crunchy.va" class="project-image">
         <h3>Crunchy.va</h3>
-        <p>A short description of the project.</p>
+        <p>Landing page about anime.</p>
+        <div class="technologies">
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-js"></i>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/rodridev-01/Crunchy.va" target="_blank">
+            <i class="fab fa-github"></i> Source
+          </a>
+          <a href="https://animebebop.netlify.app" target="_blank">
+            <i class="fas fa-external-link-alt"></i>Demo
+          </a>
+        </div>
       </div>
       <div class="project-card">
-        <img src="/images/projects/softdata.avif" alt="Project 3">
-        <h3>Softdata</h3>
-        <p>A short description of the project.</p>
+        <img src="/images/projects/softdata.avif" alt="Softdata Website" class="project-image">
+        <h3>Softdata Website</h3>
+        <p>Web development for Softdata.</p>
+        <div class="technologies">
+          <i class="fas fa-rocket"></i>
+          <i class="fab fa-js"></i>
+          <i class="fab fa-node-js"></i>
+          <i class="fas fa-database"></i>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/rodridev-01/SoftdataWebsite" target="_blank">
+            <i class="fab fa-github"></i> Source
+          </a>
+          <a href="https://sofdata.netlify.app" target="_blank">
+            <i class="fas fa-external-link-alt"></i>Demo
+          </a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="/images/projects/raccon's.avif" alt="Raccon's Adventure" class="project-image">
+        <h3>Raccon's Adventure</h3>
+        <p>Platform game about a raccoon.</p>
+        <div class="technologies">
+          <i class="fab fa-unity"></i>
+          <i class="fas fa-code"></i>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/rodridev-01/RaccoonsAdventureGame" target="_blank">
+            <i class="fab fa-github"></i>Page
+          </a>
+          <a href="/files/Raccoon's Adventure V1.01.exe" download>
+            <i class="fas fa-download"></i> Download
+          </a>          
+        </div>
       </div>
     </div>
   </section>
+
+  <div class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightboxImage">
+  </div>
+  
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -86,5 +149,9 @@
     </div>
     <p>&copy; 2024 rodridev. All Rights Reserved.</p>
   </footer>
+
+  <audio id="button-sound" src="/files/sound/click.mp3"></audio>
+
+  <script src="script.js"></script>
 </body>
 </html>
