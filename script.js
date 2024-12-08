@@ -31,3 +31,26 @@ lightbox.addEventListener('click', (e) => {
     lightbox.style.display = 'none';
   }
 });
+
+const menuToggle = document.getElementById('menu-toggle'); 
+const sideMenu = document.getElementById('side-menu'); 
+const overlay = document.getElementById('overlay'); 
+const menuLinks = document.querySelectorAll('.side-menu ul li a'); 
+
+menuToggle.addEventListener('click', function () {
+  sideMenu.style.left = '0'; 
+  overlay.style.display = 'block'; 
+});
+
+overlay.addEventListener('click', function () {
+  sideMenu.style.left = '-250px'; 
+  overlay.style.display = 'none'; 
+});
+
+menuLinks.forEach(link => {
+  link.addEventListener('click', function () {
+    sideMenu.style.left = '-250px'; 
+    overlay.style.display = 'none'; 
+  });
+});
+

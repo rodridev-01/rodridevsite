@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,8 +26,22 @@
       </ul>
       <button class="btn play-sound" onclick="window.open('mailto:rph26031994@gmail.com', '_blank')">Contact</button>
     </nav>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
   </header>
-  
+
+  <div class="side-menu" id="side-menu">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="mailto:rph26031994@gmail.com">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+
 
   <!-- HERO SECTION -->
   <section class="hero">
@@ -34,11 +49,12 @@
       <h1>Welcome to My Website</h1>
       <p>Explore the latest projects and learn more about our work and vision.</p>
       <button class="btn play-sound" onclick="window.open('mailto:rph26031994@gmail.com', '_blank')">Contact</button>
-      <button class="btn play-sound" onclick="window.open('https://drive.google.com/file/d/1sZfI2-5mSsPMg1uXJKfBwH-gFda5mrMs/view?usp=sharing', '_blank')">Resume</button>
+      <button class="btn play-sound"
+        onclick="window.open('https://drive.google.com/file/d/1sZfI2-5mSsPMg1uXJKfBwH-gFda5mrMs/view?usp=sharing', '_blank')">Resume</button>
     </div>
   </section>
 
-    <!-- CONTACT -->
+  <!-- CONTACT -->
   <section class="quick-links">
     <div class="links">
       <span>Connect with Me:</span>
@@ -53,7 +69,7 @@
       </a>
     </div>
   </section>
-  
+
 
   <!-- PROJECTS SECTION -->
   <section class="projects" id="projects">
@@ -128,7 +144,7 @@
           </a>
           <a href="/files/Raccoon's Adventure V1.01.exe" download>
             <i class="fas fa-download"></i> Download
-          </a>          
+          </a>
         </div>
       </div>
     </div>
@@ -138,7 +154,7 @@
     <span class="close">&times;</span>
     <img class="lightbox-content" id="lightboxImage">
   </div>
-  
+
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -154,4 +170,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>

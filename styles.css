@@ -132,6 +132,89 @@
       transform: scaleX(1);
     }
 
+    /* Menú hamburguesa */
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+      font-size: 30px;
+      color: var(--text-color);
+    }
+
+    /* Menú lateral (side-menu) */
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      height: 100%;
+      width: 250px;
+      background-color: #222;
+      padding: 20px;
+      transition: left 0.3s ease;
+      z-index: 1001;
+    }
+
+    .side-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .side-menu ul li {
+      margin-bottom: 20px;
+    }
+
+    .side-menu ul li a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      display: block;
+      padding: 10px;
+      transition: color 0.3s ease;
+    }
+
+    .side-menu ul li a:hover {
+      color: var(--accent-color);
+    }
+
+    /* Overlay */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .side-menu {
+        width: 200px;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .side-menu {
+        display: none;
+      }
+
+      .navbar {
+        display: flex;
+      }
+    }
+
     /* HERO SECTION */
     .hero {
       display: flex;
